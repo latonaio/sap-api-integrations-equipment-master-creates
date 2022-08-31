@@ -5,7 +5,7 @@ import (
 	sap_api_input_reader "sap-api-integrations-equipment-master-creates/SAP_API_Input_Reader"
 	"sap-api-integrations-equipment-master-creates/config"
 
-	"github.com/latonaio/golang-logging-library/logger"
+	"github.com/latonaio/golang-logging-library-for-sap/logger"
 	sap_api_post_header_setup "github.com/latonaio/sap-api-post-header-setup"
 )
 
@@ -20,10 +20,10 @@ func main() {
 		pc,
 		l,
 	)
-	inputSDC          := fr.ReadSDC("./Inputs/SDC_Equipment_Master_Header_sample.json")
-	accepter          := getAccepter(inputSDC)
-	equipment         := inputSDC.ConvertToEquipment()
-	partner           := inputSDC.ConvertToPartner()
+	inputSDC := fr.ReadSDC("./Inputs/SDC_Equipment_Master_Header_sample.json")
+	accepter := getAccepter(inputSDC)
+	equipment := inputSDC.ConvertToEquipment()
+	partner := inputSDC.ConvertToPartner()
 
 	caller.AsyncPostEquipmentMaster(
 		equipment,

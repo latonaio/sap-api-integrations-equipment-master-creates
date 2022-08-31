@@ -8,7 +8,8 @@ import (
 	sap_api_output_formatter "sap-api-integrations-equipment-master-creates/SAP_API_Output_Formatter"
 	"strings"
 	"sync"
-	"github.com/latonaio/golang-logging-library/logger"
+
+	"github.com/latonaio/golang-logging-library-for-sap/logger"
 	sap_api_post_header_setup "github.com/latonaio/sap-api-post-header-setup"
 	"golang.org/x/xerrors"
 )
@@ -30,8 +31,8 @@ func NewSAPAPICaller(baseUrl, sapClientNumber string, postClient *sap_api_post_h
 }
 
 func (c *SAPAPICaller) AsyncPostEquipmentMaster(
-	equipment         *requests.Equipment,
-	partner           *requests.Partner,
+	equipment *requests.Equipment,
+	partner *requests.Partner,
 	accepter []string) {
 	wg := &sync.WaitGroup{}
 	wg.Add(1)
