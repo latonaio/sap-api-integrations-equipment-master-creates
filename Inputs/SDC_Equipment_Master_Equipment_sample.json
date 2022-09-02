@@ -64,7 +64,7 @@
 			"CreationDate": ""
 		}
 	},
-	"api_schema": "sap.s4.beh.equipment.v1.Equipment.Created.v1",
+	"api_schema": "SAPEquipmentMasterCreates",
 	"accepter": ["Equipment"],
 	"equipment_code": "10000000",
 	"deleted": false

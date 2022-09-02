@@ -4,7 +4,7 @@
 	"redis_key": "abcdefg",
 	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
 	"Equipment": {
-		"Equipment": "",
+		"Equipment": "10000000",
 		"ValidityEndDate": "",
 		"ValidityEndTime": "",
 		"ValidityStartDate": "",
@@ -64,8 +64,8 @@
 			"CreationDate": ""
 		}
 	},
-	"api_schema": "sap.s4.beh.equipment.v1.Equipment.Created.v1",
+	"api_schema": "SAPEquipmentMasterCreates",
 	"accepter": ["EquipmentName"],
-	"equipment_code": "",
+	"equipment_code": "10000000",
 	"deleted": false
 }
